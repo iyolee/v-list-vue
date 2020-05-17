@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v-list</title>
+</head>
+<style>
+  html{
+    height: 100%;
+  }
+  body{
+    height: 100%;
+    margin:0;
+  }
+  #app{
+    height:100%;
+  }
+  </style>
+<body>
+  <div id="app">
+    <v-list :list-data="listData" :item-height="200" />
+  </div>
+  <script src="./vue.min.js"></script>
+  <script src="../dist/vList.js"></script>
+  <script>
+    function createData() {
+      const d = [];
+      for (let i = 0; i < 200000; i++) {
+        d.push({ id: i, value: i });
+      }
+      return d;
+    }
+    // Vue.use(vList);
+    new Vue({
+      el: '#app',
+      data: function() {
+        return {
+          listData: createData(),
+        }
+      }
+    });
+</script>
+</body>
+</html>

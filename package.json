@@ -1,0 +1,38 @@
+{
+  "name": "v-list-vue",
+  "version": "1.0.0",
+  "main": "dist/vList.js",
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build",
+    "demo": "live-server ./ --port=1337 --watch=./",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "lint": "eslint --ext js ./src",
+    "start": "concurrently \"yarn:dev\" \"yarn:demo\""
+  },
+  "repository": "git@github.com:iyolee/v-list-vue.git",
+  "author": "Jenkin Lee <zhongjianlee@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@vue/babel-preset-app": "^4.3.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "live-server": "^1.2.1",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.1",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "yargs": "^15.3.1"
+  },
+  "peerDependencies": {
+    "vue": ">= 2.6.0"
+  }
+}
